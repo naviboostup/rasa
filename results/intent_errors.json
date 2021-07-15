@@ -1,0 +1,10 @@
+[
+  {
+    "text": "مهلا",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.8245455026626587
+    }
+  }
+]

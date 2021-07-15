@@ -1,0 +1,139 @@
+version: "2.0"
+
+rules:
+
+- rule: Exit
+  steps:
+  - intent: exit
+  - action: action_exit
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: respond to FAQs
+  steps:
+  - intent: faq
+  - action: utter_faq
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: action_default_fallback
+
+- rule: scholarships Available form
+  steps:
+  - intent: available_university
+  - action: scholarship_availability_form
+  - active_loop: scholarship_availability_form
+
+- rule: deactivate scholarships available form
+  condition:
+  - active_loop: scholarship_availability_form
+  steps:
+  - action: scholarship_availability_form
+  - active_loop: null
+  - slot_was_set:
+      - requested_slot: null
+      # The actions we want to run when the form is submitted.
+  - action: action_submit_scholarship_availability_form
+
+
+- rule: local school form
+  steps:
+  - intent: local_school
+  - action: local_school_form
+  - active_loop: local_school_form
+
+- rule: deactivate local school form
+  condition:
+  - active_loop: local_school_form
+  steps:
+  - action: local_school_form
+  - active_loop: null
+  - slot_was_set:
+      - requested_slot: null
+      # The actions we want to run when the form is submitted.
+  - action: action_submit_local_school_form
+
+- rule: Search Program
+  steps:
+  - intent: program_search
+  - action: utter_select_program_by
+
+- rule: deactivate search programform
+  condition:
+  - active_loop: search_program_code_form
+  steps:
+  - action: search_program_code_form
+  - active_loop: null
+  - slot_was_set:
+      - requested_slot: null
+      # The actions we want to run when the form is submitted.
+  - action: action_submit_search_program_code_form
+
+- rule: deactivate search program country form
+  condition:
+  - active_loop: search_program_con_form
+  steps:
+  - action: search_program_con_form
+  - active_loop: null
+  - slot_was_set:
+      - requested_slot: null
+      # The actions we want to run when the form is submitted.
+  - action: action_submit_search_program_con_form
+
+- rule: main_menu form
+  steps:
+  - intent: greet
+  - action: main_menu_form
+  - active_loop: main_menu_form
+
+- rule: deactivate scholarships available form
+  condition:
+  - active_loop: main_menu_form
+  steps:
+  - action: main_menu_form
+  - active_loop: null
+  - slot_was_set:
+      - requested_slot: null
+      # The actions we want to run when the form is submitted.
+  - action: action_submit_main_menu_form
+
+- rule: seventh_menu_form form
+  steps:
+  - action: seventh_menu_form
+  - active_loop: seventh_menu_form
+
+- rule: deactivate Seventh Menu form
+  condition:
+  - active_loop: seventh_menu_form
+  steps:
+  - action: seventh_menu_form
+  - active_loop: null
+  - slot_was_set:
+      - requested_slot: null
+      # The actions we want to run when the form is submitted.
+  - action: action_submit_seventh_menu_form
+
+- rule: select_program_by_form form
+  steps:
+  - action: select_program_by_form
+  - active_loop: select_program_by_form
+
+- rule: deactivate select_program_by_form form
+  condition:
+  - active_loop: select_program_by_form
+  steps:
+  - action: select_program_by_form
+  - active_loop: null
+  - slot_was_set:
+      - requested_slot: null
+      # The actions we want to run when the form is submitted.
+  - action: action_submit_select_program_by_form

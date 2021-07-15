@@ -1,0 +1,168 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - مهلا
+    - مرحبا
+    - أهلا
+    - أهلا بك
+    - صباح الخير
+    - مساء الخير
+    - معين
+    - مرحبا يا من هناك
+    - هيا بنا
+    - اهلا يا دودى
+    - hey
+    - how are you
+    - hello
+    - heloo from oman
+    - hi
+    - hiiiiiiii
+    - hiii
+    - 1
+    - one
+    - 1
+    - main menu
+    - take me to main menu
+    - 1
+    - 1
+    - 1
+    - 1
+    - one
+    - واحد
+    - ١
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: available_university
+  examples: |
+    - ما هي الجامعات أو الكليات المتاحة للمنح الدراسية؟
+    - ماهي الكليات المتوفرة للابتعاث
+    - الجامعات المتاحة
+    - الجامعات والكليات المتاحة للابتعاث
+    - في أي كليات يمكنني التقدم بطلب للحصول على منحة دراسية
+    - الكليات المبتعثة
+    - منحة دراسية متاحة في أي كليات
+    - المنح الدراسية
+    - منحة دراسية
+    - What are the universities or colleges availabe for scholarship?
+    - what colleges are available for scholarship
+    - universities available
+    - universities and colleges available for scholarship
+    - In which colleges i can apply for scholarship
+    - scholarshipcolleges
+    - scholarship is available in which colleges
+    - scholarships
+    - scholarship
+- intent: program_search
+  examples: |
+    - search Programs
+    - what different programs do u have
+    - program code
+    - i want to search program
+    - show me different programs
+    - Search Program
+    - search program
+    - Search Programs
+- intent: choose_option
+  examples: |
+    - [1](choice)
+    - [2](choice)
+    - [3](choice)
+    - [4](choice)
+    - [5](choice)
+    - [6](choice)
+    - [١](choice)
+    - [٢](choice)
+- intent: local_school
+  examples: |
+    - ما هي مدارس التعريب؟
+    - ما هي المدارس المحلية
+    - الرجاء اختيار المدارس المحلية
+    - أرني المدارس المحلية
+    - المدارس المحلية
+    - المدرسة المحلية
+    - مدارس التعريب
+- intent: exit
+  examples: |
+    - exit
+    - i want to exit
+    - take me to to home
+    - exit
+    - home
+    - exiit
+    - ext
+    - exit
+    - خروج
+    - اريد الخروج
+    - خذني إلى المنزل
+    - خروج
+    - الصفحة الرئيسية
+    - خروج
+
